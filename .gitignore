@@ -7,4 +7,7 @@ config.mak
 lib/musl-gcc.specs
 /obj/
 
+.vscode
 .cache
+build/
+build-*/
