@@ -2,8 +2,8 @@
 
 mkdir -p build && pushd build
 
-CC="clang" AR="llvm-ar" RANLIB="llvm-ranlib" \
-  CFLAGS="-mcmodel=medany -nostdlib -O2" \
+CC="clang" CROSS_COMPILE="llvm-" \
+  CFLAGS="--target=riscv64-unknown-elf -mcmodel=medany -nostdlib -O2" \
   ../configure \
   --prefix=$PWD/install \
   --target=riscv64-unknown-elf \
